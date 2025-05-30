@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3A2E39;
+    text-align: center;
+}
+ h1 {
+    color: #EDB183;
+    margin: 2rem 0;
+    
+}
+
+.container {
+    width: 100vw;
+    height: 90vh;
+}
+
+#label , h3{
+    color: #F15152;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: .5rem 0;
+}
+#inputCityName {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    border:none;
+    outline: none;
+    font-size: 1rem;
+    width: 80%;
+    color: #fdfdfd;
+    font-weight: 700;
+    background-color: rgb(99, 64, 64);
+    letter-spacing: .1rem;
+}
+button {
+    padding: .5rem;
+    width: 8rem;
+    border-radius: 2rem;
+    border: none;
+    margin-bottom: 1rem;
+    background-color: #EDB183;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.data {
+    width: 80vw;
+    text-align: start;
+    margin-left: 2rem;
+}
+
+section p {
+
+    margin-top: .5rem;
+    color: #EDB183;
+    font-size: 1rem;
+    letter-spacing: .1rem;
+
+} 
+
+#mark {
+    text-align: center;
+    display: inline;
+    font-size: .3rem;
+    font-weight: 700;
+    color: black;
+    font-style: italic;
+    font-family: monospace;
+}
+
+.hide {
+    display: none;
+}
