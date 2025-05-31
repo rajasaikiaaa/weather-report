@@ -17,13 +17,14 @@ const DataDiv = document.querySelector("#data");
 
 
 async function getData (cityname) {
-    const promise = await fetch(`http://api.weatherapi.com/v1/current.json?key=2c443e427f174b17a1e131739253005&q=${cityname}&aqi=yes`)
+    const promise = await fetch(`https://api.weatherapi.com/v1/current.json?key=2c443e427f174b17a1e131739253005&q=${cityname}&aqi=yes`);
     return await promise.json();
 }
 
 srcBtn.addEventListener("click", async () => {
     const value = input.value;
     const data = await getData(value);
+    console.log(data);
     DataDiv.classList.remove("hide");
     cityName.innerText = `City Name : ${data.location.name}`;
     region.innerText= `Region : ${data.location.region}`;
