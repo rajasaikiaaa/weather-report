@@ -13,11 +13,11 @@ const longitude = document.querySelector("#long");
 const localTime = document.querySelector("#time");
 const localTemp = document.querySelector("#temp");
 const localCondition = document.querySelector("#condition");
-const DataDiv = document.querySelector("#data");
+const dataDiv = document.querySelector("#data");
 
 
 async function getData (cityname) {
-    const promise = await fetch(`https://api.weatherapi.com/v1/current.json?key=2c443e427f174b17a1e131739253005&q=${cityname}&aqi=yes`);
+    let promise = await fetch(`https://api.weatherapi.com/v1/current.json?key=2c443e427f174b17a1e131739253005&q=${cityname}&aqi=yes`);
     return await promise.json();
 }
 
@@ -25,7 +25,7 @@ srcBtn.addEventListener("click", async () => {
     const value = input.value;
     const data = await getData(value);
     console.log(data);
-    DataDiv.classList.remove("hide");
+    dataDiv.classList.remove("hide");
     cityName.innerText = `City Name : ${data.location.name}`;
     region.innerText= `Region : ${data.location.region}`;
     country.innerText = `Country : ${data.location.country}`;
